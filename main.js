@@ -27,4 +27,24 @@ camera.position.setZ(30);
 
 renderer.render( scene, camera );
 
+// creating an Object:
+// Geometry: the {x , y, z} points that makeup a shape 
+// Material: the wrapping paper for an object
+// Mesh: geometry + material
 
+const geometry = new THREE.TorusGeometry(10, 3, 16, 100)
+const material = new THREE.MeshBasicMaterial( { color: 0xFF6347, wireframe: true } );
+const torus = new THREE.Mesh( geometry, material );
+
+scene.add(torus)
+
+// render method called to see Animation
+// set up game loop to render repeatedly
+
+function animate() {
+  requestAnimationFrame( animate );
+  renderer.render( scene, camera );
+
+}
+
+animate()
