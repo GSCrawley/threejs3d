@@ -1,5 +1,6 @@
 {
   "version": "0.0.0",
+  "homepage": "GSCrawley.github.io/threejs3d/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
