@@ -66,6 +66,9 @@ function addStar() {
 
 Array(500).fill().forEach(addStar)
 
+const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+scene.background = spaceTexture;
+
 // render method called to see Animation
 // set up game loop to render repeatedly
 
