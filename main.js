@@ -69,6 +69,17 @@ Array(500).fill().forEach(addStar)
 const spaceTexture = new THREE.TextureLoader().load('space.jpg');
 scene.background = spaceTexture;
 
+// Avatar
+
+const gidTexture = new THREE.TextureLoader().load('me.jpeg');
+
+const gid = new THREE.Mesh(
+  new THREE.BoxGeometry(6,6,6),
+  new THREE.MeshBasicMaterial( { map: gidTexture } )
+);
+
+scene.add(gid)
+
 // render method called to see Animation
 // set up game loop to render repeatedly
 
