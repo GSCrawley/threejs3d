@@ -24,7 +24,7 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setSize( window.innerWidth, window.innerHeight );
-camera.position.setZ(30);
+camera.position.setZ(40);
 
 renderer.render( scene, camera );
 
@@ -78,7 +78,9 @@ const gid = new THREE.Mesh(
   new THREE.MeshBasicMaterial( { map: gidTexture } )
 );
 
-// scene.add(gid)
+scene.add(gid)
+
+
 
 // Moon
 
@@ -95,6 +97,8 @@ const moon = new THREE.Mesh(
 
 scene.add(moon)
 
+moon.position.x = 10;
+moon.position.y = 16;
 // render method called to see Animation
 // set up game loop to render repeatedly
 
